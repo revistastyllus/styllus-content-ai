@@ -1,7 +1,6 @@
-import { defineConfig } from 'vinxi/config'
 import { tanstackBuildConfig } from '@lovable.dev/vite-tanstack-config'
 
-export default defineConfig({
+export default {
   routers: {
     public: {
       type: 'static',
@@ -13,4 +12,4 @@ export default defineConfig({
       plugins: () => [tanstackBuildConfig()]
     }
   }
-})
+}
