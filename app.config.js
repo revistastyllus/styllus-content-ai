@@ -1,6 +1,6 @@
-const { defineConfig } = require('@tanstack/start/config');
+import { defineConfig } from '@tanstack/start/config';
 
-module.exports = defineConfig({
+export default defineConfig({
   vite: {
     plugins: []
   }
