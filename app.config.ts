@@ -1,4 +1,4 @@
-import { defineConfig } from 'vinxi'
+import { defineConfig } from 'vinxi/config'
 import { tanstackBuildConfig } from '@lovable.dev/vite-tanstack-config'
 
 export default defineConfig({
