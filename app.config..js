@@ -1,5 +1,3 @@
-import { tanstackBuildConfig } from '@lovable.dev/vite-tanstack-config'
-
 export default {
   routers: {
     public: {
@@ -9,8 +7,10 @@ export default {
     },
     client: {
       type: 'client',
-      plugins: () => [tanstackBuildConfig()]
+      dir: './src',
+      base: '/'
     }
   }
 }
+
 
