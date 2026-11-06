@@ -1,6 +1,0 @@
-{
-  "version": 2,
-  "buildCommand": "vinxi build",
-  "outputDirectory": ".output"
-}
-
