@@ -14,11 +14,7 @@
     "test": "vitest run",
     "test:watch": "vitest"
   }
-        "overrides": {
-    "rolldown": "1.2.1",
-    "@tanstack/router-generator": "^1.168.0",
-    "@tanstack/router-plugin": "^1.168.0"
-  },
+     
 
 
 
