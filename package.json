@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "npx tsr generate && vite build",
     "start": "vite preview",
     "preview": "vite preview",
     "lint": "eslint .",
