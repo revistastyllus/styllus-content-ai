@@ -9,14 +9,14 @@ export const isSupabaseConfigured = () =>
   Boolean(supabaseUrl && supabaseAnonKey && !supabaseUrl.includes("seu-projeto") && !supabaseAnonKey.includes("sua-chave"));
 
 export const supabase = createClient(
-  supabaseUrl || "https://seu-projeto.supabase.co",
-  supabaseAnonKey || "sua-chave-anon-do-supabase",
+  supabaseUrl,
+  supabaseAnonKey,
   {
     auth: {
       persistSession: true,
       autoRefreshToken: true,
       detectSessionInUrl: true,
-    },
+    }
   }
 );
 
