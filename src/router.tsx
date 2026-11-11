@@ -1,11 +1,16 @@
 import { createRouter } from '@tanstack/react-router';
+import { QueryClient } from '@tanstack/react-query';
 import { routeTree } from './routeTree.gen';
+
+const queryClient = new QueryClient();
 
 export const router = createRouter({
   routeTree,
+  context: {
+    queryClient,
+  },
 });
 
-// Essa linha resolve o erro do Netlify dizendo que o getRouter sumiu
 export const getRouter = () => router;
 
 declare module '@tanstack/react-router' {
