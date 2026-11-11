@@ -1,7 +1,7 @@
 import { hydrateRoot } from 'react-dom/client'
-import { StartClient } from '@tanstack/start/client'
-import { router } from './router'
+import { StartClient } from '@tanstack/react-start/client'
 
-hydrateRoot(document, <StartClient router={router} />)
+hydrateRoot(document, <StartClient />)
+
 
 
