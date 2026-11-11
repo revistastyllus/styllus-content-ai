@@ -1,7 +1,7 @@
-import { createStartHandler } from '@tanstack/start/client'
+import { hydrateRoot } from 'react-dom/client'
+import { StartClient } from '@tanstack/start/client'
 import { router } from './router'
 
-createStartHandler({
-  router,
-})()
+hydrateRoot(document, <StartClient router={router} />)
+
 
