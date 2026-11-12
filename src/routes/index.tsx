@@ -6,13 +6,23 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { PLANS, TOOLS } from "@/lib/tools";
 import { cn } from "@/lib/utils";
 
+const SITE_URL = ["https://", "stylluscontentai", ".netlify.app"].join("");
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Styllus Content AI — Conteúdo para Instagram com IA" },
       { name: "description", content: "Crie legendas, hashtags, roteiros de Reels, Stories e carrosséis para o Instagram em segundos, em português." },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
       { property: "og:title", content: "Styllus Content AI — Conteúdo para Instagram com IA" },
       { property: "og:description", content: "Crie conteúdos incríveis para o Instagram em segundos." },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
     ],
   }),
   component: Home,
@@ -129,10 +139,10 @@ function Home() {
       <section id="faq" className="bg-secondary py-24">
         <div className="mx-auto max-w-3xl px-5">
           <h2 className="text-center text-3xl font-bold sm:text-4xl">Perguntas frequentes</h2>
-          <Accordion type="single" collapsible className="mt-10 rounded-2xl bg-card px-6">
+          <Accordion type="single" collapsible className="mt-10 rounded-2xl border bg-card px-6">
             {FAQ.map((f, i) => (
-              <AccordionItem key={i} value={`q${i}`}>
-                <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
+              <AccordionItem key={f.q} value={`item-${i}`}>
+                <AccordionTrigger className="text-left font-semibold">{f.q}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
               </AccordionItem>
             ))}
@@ -140,11 +150,8 @@ function Home() {
         </div>
       </section>
 
-      <footer className="bg-deep py-10 text-deep-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 sm:flex-row">
-          <Logo light />
-          <p className="text-sm text-deep-foreground/60">© {new Date().getFullYear()} Styllus Content AI. Todos os direitos reservados.</p>
-        </div>
+      <footer className="border-t py-10 text-center text-sm text-muted-foreground">
+        © {new Date().getFullYear()} Styllus Content AI. Todos os direitos reservados.
       </footer>
     </div>
   );
