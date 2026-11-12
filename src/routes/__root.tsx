@@ -48,9 +48,9 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
           This page didn't load
         </h1>
-             <p className="mt-2 text-sm text-red-600 font-mono break-words">
-        {error instanceof Error ? `${error.name}: ${error.message}` : String(error)}
-      </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong on our end. You can try refreshing or head back home.
+        </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
@@ -78,19 +78,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Styllus Content AI" },
-      { name: "description", content: "Gerador inteligente de conteúdo para Instagram." },
+      { title: "Styllus Content AI — Conteúdo para Instagram com IA" },
+      { name: "description", content: "Crie legendas, hashtags, roteiros de Reels, Stories e carrosséis em segundos no tom da sua marca." },
+      { property: "og:title", content: "Styllus Content AI — Conteúdo para Instagram com IA" },
+      { property: "og:description", content: "Crie legendas, hashtags, roteiros de Reels, Stories e carrosséis em segundos no tom da sua marca." },
+      { property: "og:url", content: "https://netlify.app" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://netlify.appog-image.jpg" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
-      
+      { name: "twitter:image", content: "https://netlify.appog-image.jpg" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
+      { rel: "preconnect", href: "https://googleapis.com" },
+      { rel: "stylesheet", href: "https://googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
