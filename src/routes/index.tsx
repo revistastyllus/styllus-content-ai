@@ -74,11 +74,24 @@ function Home() {
             Crie conteúdos incríveis para o Instagram <span className="text-brand">em segundos!</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-deep-foreground/70">Legendas, hashtags, roteiros de Reels, Stories e carrosséis no tom da sua marca — para criadores, empreendedores e empresas.</p>
-          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+                      <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" className="bg-brand shadow-glow"><Link to="/cadastro">Criar conta grátis</Link></Button>
             <Button asChild size="lg" variant="outline" className="border-sidebar-border bg-transparent text-deep-foreground hover:bg-sidebar-accent hover:text-deep-foreground"><Link to="/app">Ver o painel</Link></Button>
           </div>
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-5">
+          <div className="mx-auto mt-12 w-full max-w-3xl">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-purple-500/40 shadow-[0_20px_50px_rgba(126,34,206,0.25)]">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://youtube.com/embed/suINBblvORs"
+                title="Demonstração Styllus Content AI"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
             {TOOLS.map((t) => (
               <div key={t.key} className="rounded-2xl border border-sidebar-border bg-sidebar-accent/40 p-4 text-left backdrop-blur">
                 <t.icon className="h-5 w-5 text-glow" />
