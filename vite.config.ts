@@ -11,5 +11,6 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  plugins: [tanstackStart(), react(), tailwindcss(), netlify()],
+plugins: [tanstackStart(), netlify(), react(), tailwindcss()],
+
 });
