@@ -74,6 +74,7 @@ function Home() {
             Crie conteúdos incríveis para o Instagram <span className="text-brand">em segundos!</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-deep-foreground/70">Legendas, hashtags, roteiros de Reels, Stories e carrosséis no tom da sua marca — para criadores, empreendedores e empresas.</p>
+</p>
                       <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" className="bg-brand shadow-glow"><Link to="/cadastro">Criar conta grátis</Link></Button>
             <Button asChild size="lg" variant="outline" className="border-sidebar-border bg-transparent text-deep-foreground hover:bg-sidebar-accent hover:text-deep-foreground"><Link to="/app">Ver o painel</Link></Button>
@@ -97,6 +98,7 @@ function Home() {
                 <t.icon className="h-5 w-5 text-glow" />
                 <p className="mt-2 text-sm font-semibold">{t.name}</p>
               </div>
+
             ))}
           </div>
         </div>
